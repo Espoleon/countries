@@ -21,7 +21,7 @@
                 
                 --countriesContainerBackgroundColor: rgb(182, 195, 208);
                 
-                --countriesWidth: 440px;
+                --countriesWidth: 470px;
                 --countriesHeadHeight: 30px;
                 --countriesBackground: rgba(164, 175, 186, 1.0);
                 --countriesBackgroundHover: rgba(192, 203, 214, 1.0);
@@ -50,10 +50,25 @@
             }
 
             /* Countries */
-            .countriesContainer {
+            .countriesContainerHead {
                 display: grid;
                 justify-content: center;
                 align-content: center;
+                grid-template-columns: repeat(auto-fit, minmax(var(--countriesWidth), 1fr));
+                grid-gap: 0px 0px;
+                margin: 2px auto 2px auto;
+                width: 99%;
+                height: auto;
+                font-family: arial;
+                font-size: 14px;
+                background: var(--countriesContainerBackgroundColor);
+                border: 1px solid rgb(65, 65, 65);
+                border-radius: 10px;
+            }
+            .countriesContainer {
+                display: grid;
+                justify-content: center;
+                align-content: start;
                 grid-template-columns: repeat(auto-fit, minmax(var(--countriesWidth), 1fr));
                 grid-gap: 0px 0px;
                 margin: 2px auto 2px auto;
@@ -107,9 +122,9 @@
             .head {
                 display: grid;
                 grid-area: head;
-                justify-content: center;
+                justify-content: start;
                 align-content: center;
-                grid-template-columns: 50px 1fr;
+                grid-template-columns: 50px 70%;
                 grid-template-rows: var(--countriesHeadHeight);
                 grid-gap: 0px 0px;
                 grid-template-areas:
@@ -143,6 +158,9 @@
                 justify-content: start;
                 align-content: center;
                 grid-auto-flow: column;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
             
             /* Body */
@@ -242,7 +260,7 @@
         <script src="https://kit.fontawesome.com/fc66947bd3.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div id="countries">
+        <div id="countriesContent">
         </div>
         <script type="text/javascript">
             /* JSON */
@@ -637,6 +655,490 @@
                         "topleveldomain": ".az",
                         "utc": "+4",
                         "voltage": "230"
+                    },
+                    "Bahamas": {
+                        "alpha2": "BS",
+                        "alpha3": "BHS",
+                        "callingcode": "+1-242",
+                        "capital": "Nassau",
+                        "continent": "America",
+                        "currency": "Bahamian Dollar",
+                        "currencycode": "BSD",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "60",
+                        "language": "English",
+                        "languagecode": "en",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Bahamas",
+                        "numeric": "044",
+                        "timezone": "Eastern Standard Time",
+                        "timezonecode": "EST",
+                        "topleveldomain": ".bs",
+                        "utc": "-5",
+                        "voltage": "120"
+                    },
+                    "Bahrain": {
+                        "alpha2": "BH",
+                        "alpha3": "BHR",
+                        "callingcode": "+973",
+                        "capital": "Manama",
+                        "continent": "Asia",
+                        "currency": "Bahraini Dinar",
+                        "currencycode": "BHD",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "50",
+                        "language": "Arabic",
+                        "languagecode": "ar",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Bahrain",
+                        "numeric": "048",
+                        "timezone": "Arabia Standard Time",
+                        "timezonecode": "AST",
+                        "topleveldomain": ".bh",
+                        "utc": "+3",
+                        "voltage": "230"
+                    },
+                    "Bangladesh": {
+                        "alpha2": "BD",
+                        "alpha3": "BGD",
+                        "callingcode": "+880",
+                        "capital": "Dhaka",
+                        "continent": "Asia",
+                        "currency": "Bangladeshi Taka",
+                        "currencycode": "BDT",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "50",
+                        "language": "Bengali",
+                        "languagecode": "bn",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Bangladesh",
+                        "numeric": "050",
+                        "timezone": "Bangladesh Standard Time",
+                        "timezonecode": "BST",
+                        "topleveldomain": ".bd",
+                        "utc": "+6",
+                        "voltage": "220"
+                    },
+                    "Barbados": {
+                        "alpha2": "BB",
+                        "alpha3": "BRB",
+                        "callingcode": "+1-246",
+                        "capital": "Bridgetown",
+                        "continent": "America",
+                        "currency": "Barbados Dollar",
+                        "currencycode": "BBD",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "50",
+                        "language": "English",
+                        "languagecode": "en",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Barbados",
+                        "numeric": "052",
+                        "timezone": "Atlantic Standard Time",
+                        "timezonecode": "AST",
+                        "topleveldomain": ".bb",
+                        "utc": "-4",
+                        "voltage": "115"
+                    },
+                    "Belarus": {
+                        "alpha2": "BY",
+                        "alpha3": "BLR",
+                        "callingcode": "+375",
+                        "capital": "Minsk",
+                        "continent": "Europe",
+                        "currency": "Belarusian Ruble",
+                        "currencycode": "BYN",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "50",
+                        "language": "Belarusian",
+                        "languagecode": "be",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Belarus",
+                        "numeric": "112",
+                        "timezone": "Moscow Standard Time",
+                        "timezonecode": "MSK",
+                        "topleveldomain": ".by",
+                        "utc": "+3",
+                        "voltage": "220"
+                    },
+                    "Belgium": {
+                        "alpha2": "BE",
+                        "alpha3": "BEL",
+                        "callingcode": "+32",
+                        "capital": "Brussels",
+                        "continent": "Europe",
+                        "currency": "Euro",
+                        "currencycode": "EUR",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "50",
+                        "language": "Dutch, French, German",
+                        "languagecode": "nl, fr, de",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Belgium",
+                        "numeric": "056",
+                        "timezone": "Central European Time",
+                        "timezonecode": "CET",
+                        "topleveldomain": ".be",
+                        "utc": "+1",
+                        "voltage": "230"
+                    },
+                    "Belize": {
+                        "alpha2": "BZ",
+                        "alpha3": "BLZ",
+                        "callingcode": "+501",
+                        "capital": "Belmopan",
+                        "continent": "America",
+                        "currency": "Belize Dollar",
+                        "currencycode": "BZD",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "60",
+                        "language": "English",
+                        "languagecode": "en",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Belize",
+                        "numeric": "084",
+                        "timezone": "Central Standard Time",
+                        "timezonecode": "CST",
+                        "topleveldomain": ".bz",
+                        "utc": "-6",
+                        "voltage": "110/220"
+                    },
+                    "Benin": {
+                        "alpha2": "BJ",
+                        "alpha3": "BEN",
+                        "callingcode": "+229",
+                        "capital": "Porto-Novo",
+                        "continent": "Africa",
+                        "currency": "West African CFA Franc",
+                        "currencycode": "XOF",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "50",
+                        "language": "French",
+                        "languagecode": "fr",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Benin",
+                        "numeric": "204",
+                        "timezone": "West Africa Time",
+                        "timezonecode": "WAT",
+                        "topleveldomain": ".bj",
+                        "utc": "+1",
+                        "voltage": "220"
+                    },
+                    "Bermuda": {
+                        "alpha2": "BM",
+                        "alpha3": "BMU",
+                        "callingcode": "+1-441",
+                        "capital": "Hamilton",
+                        "continent": "America",
+                        "currency": "Bermudian Dollar",
+                        "currencycode": "BMD",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "60",
+                        "language": "English",
+                        "languagecode": "en",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Bermuda",
+                        "numeric": "060",
+                        "timezone": "Atlantic Standard Time",
+                        "timezonecode": "AST",
+                        "topleveldomain": ".bm",
+                        "utc": "-4",
+                        "voltage": "120"
+                    },
+                    "Bhutan": {
+                        "alpha2": "BT",
+                        "alpha3": "BTN",
+                        "callingcode": "+975",
+                        "capital": "Thimphu",
+                        "continent": "Asia",
+                        "currency": "Bhutanese Ngultrum",
+                        "currencycode": "BTN",
+                        "dateformat": "yyyy.mm.dd",
+                        "hertz": "50",
+                        "language": "Dzongkha",
+                        "languagecode": "dz",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Bhutan",
+                        "numeric": "064",
+                        "timezone": "Bhutan Time",
+                        "timezonecode": "BTT",
+                        "topleveldomain": ".bt",
+                        "utc": "+6",
+                        "voltage": "230"
+                    },
+                    "Bolivia": {
+                        "alpha2": "BO",
+                        "alpha3": "BOL",
+                        "callingcode": "+591",
+                        "capital": "Sucre",
+                        "continent": "America",
+                        "currency": "Boliviano",
+                        "currencycode": "BOB",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "50",
+                        "language": "Spanish",
+                        "languagecode": "es",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Bolivia",
+                        "numeric": "068",
+                        "timezone": "Bolivia Time",
+                        "timezonecode": "BOT",
+                        "topleveldomain": ".bo",
+                        "utc": "-4",
+                        "voltage": "115/230"
+                    },
+                    "Bonaire, Sint Eustatius and Saba": {
+                        "alpha2": "BQ",
+                        "alpha3": "BES",
+                        "callingcode": "+599-7, +599-4, +599-3",
+                        "capital": "Kralendijk, The Bottom, Oranjestad",
+                        "continent": "America",
+                        "currency": "United States Dollar",
+                        "currencycode": "USD",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "50",
+                        "language": "Dutch",
+                        "languagecode": "nl",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Bonaire, Sint Eustatius and Saba",
+                        "numeric": "535",
+                        "timezone": "Atlantic Standard Time",
+                        "timezonecode": "AST",
+                        "topleveldomain": ".bq",
+                        "utc": "-4",
+                        "voltage": "127"
+                    },
+                    "Bosnia and Herzegovina": {
+                        "alpha2": "BA",
+                        "alpha3": "BIH",
+                        "callingcode": "+387",
+                        "capital": "Sarajevo",
+                        "continent": "Europe",
+                        "currency": "Bosnia and Herzegovina Convertible Mark",
+                        "currencycode": "BAM",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "50",
+                        "language": "Bosnian",
+                        "languagecode": "bs",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Bosnia and Herzegovina",
+                        "numeric": "070",
+                        "timezone": "Central European Time",
+                        "timezonecode": "CET",
+                        "topleveldomain": ".ba",
+                        "utc": "+1",
+                        "voltage": "230"
+                    },
+                    "Botswana": {
+                        "alpha2": "BW",
+                        "alpha3": "BWA",
+                        "callingcode": "+267",
+                        "capital": "Gaborone",
+                        "continent": "Africa",
+                        "currency": "Botswana Pula",
+                        "currencycode": "BWP",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "50",
+                        "language": "English",
+                        "languagecode": "en",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Botswana",
+                        "numeric": "072",
+                        "timezone": "Central Africa Time",
+                        "timezonecode": "CAT",
+                        "topleveldomain": ".bw",
+                        "utc": "+2",
+                        "voltage": "230"
+                    },
+                    "Bouvet Island": {
+                        "alpha2": "BV",
+                        "alpha3": "BVT",
+                        "callingcode": "+47",
+                        "capital": "",
+                        "continent": "Oceania",
+                        "currency": "Norwegian Krone",
+                        "currencycode": "NOK",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "",
+                        "language": "Norwegian",
+                        "languagecode": "no",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Bouvet Island",
+                        "numeric": "074",
+                        "timezone": "Central European Time",
+                        "timezonecode": "CET",
+                        "topleveldomain": ".bv",
+                        "utc": "+1",
+                        "voltage": ""
+                    },
+                    "Brazil": {
+                        "alpha2": "BR",
+                        "alpha3": "BRA",
+                        "callingcode": "+55",
+                        "capital": "Brasília",
+                        "continent": "America",
+                        "currency": "Brazilian Real",
+                        "currencycode": "BRL",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "60",
+                        "language": "Portuguese",
+                        "languagecode": "pt",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Brazil",
+                        "numeric": "076",
+                        "timezone": "Brasilia Time",
+                        "timezonecode": "BRT",
+                        "topleveldomain": ".br",
+                        "utc": "-3",
+                        "voltage": "127/220"
+                    },
+                    "British Indian Ocean Territory": {
+                        "alpha2": "IO",
+                        "alpha3": "IOT",
+                        "callingcode": "+246",
+                        "capital": "Camp Thunder Cove",
+                        "continent": "Africa",
+                        "currency": "Pound Sterling",
+                        "currencycode": "GBP",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "50",
+                        "language": "English",
+                        "languagecode": "en",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "British Indian Ocean Territory",
+                        "numeric": "086",
+                        "timezone": "Indian Chagos Time",
+                        "timezonecode": "ICT",
+                        "topleveldomain": ".io",
+                        "utc": "+6",
+                        "voltage": "230"
+                    },
+                    "Brunei Darussalam": {
+                        "alpha2": "BN",
+                        "alpha3": "BRN",
+                        "callingcode": "+673",
+                        "capital": "Malay",
+                        "continent": "Asia",
+                        "currency": "Brunei Dollar",
+                        "currencycode": "BND",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "50",
+                        "language": "Malay",
+                        "languagecode": "ms",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Brunei Darussalam",
+                        "numeric": "096",
+                        "timezone": "Brunei Darussalam Time",
+                        "timezonecode": "BNT",
+                        "topleveldomain": ".bn",
+                        "utc": "+8",
+                        "voltage": "240"
+                    },
+                    "Bulgaria": {
+                        "alpha2": "BG",
+                        "alpha3": "BGR",
+                        "callingcode": "+359",
+                        "capital": "Sofia",
+                        "continent": "Europe",
+                        "currency": "Bulgarian Lev",
+                        "currencycode": "BGN",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "50",
+                        "language": "Bulgarian",
+                        "languagecode": "bg",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Bulgaria",
+                        "numeric": "100",
+                        "timezone": "Eastern European Time",
+                        "timezonecode": "EET",
+                        "topleveldomain": ".bg",
+                        "utc": "+2",
+                        "voltage": "230"
+                    },
+                    "Burkina Faso": {
+                        "alpha2": "BF",
+                        "alpha3": "BFA",
+                        "callingcode": "+226",
+                        "capital": "Ouagadougou",
+                        "continent": "Africa",
+                        "currency": "West African CFA Franc",
+                        "currencycode": "XOF",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "50",
+                        "language": "French",
+                        "languagecode": "fr",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Burkina Faso",
+                        "numeric": "854",
+                        "timezone": "Greenwich Mean Time",
+                        "timezonecode": "GMT",
+                        "topleveldomain": ".bf",
+                        "utc": "-1",
+                        "voltage": "220"
+                    },
+                    "Burundi": {
+                        "alpha2": "BI",
+                        "alpha3": "BDI",
+                        "callingcode": "+257",
+                        "capital": "Gitega",
+                        "continent": "Africa",
+                        "currency": "Burundian Franc",
+                        "currencycode": "BIF",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "50",
+                        "language": "Kirundi",
+                        "languagecode": "rn",
+                        "latitude": "",
+                        "longitude": "",
+                        "name": "Burundi",
+                        "numeric": "108",
+                        "timezone": "Central Africa Time",
+                        "timezonecode": "CAT",
+                        "topleveldomain": ".bi",
+                        "utc": "+2",
+                        "voltage": "220"
+                    },
+                    "Germany": {
+                        "alpha2": "DE",
+                        "alpha3": "DEU",
+                        "callingcode": "+49",
+                        "capital": "Berlin",
+                        "continent": "Europe",
+                        "currency": "Euro",
+                        "currencycode": "EUR",
+                        "dateformat": "dd.mm.yyyy",
+                        "hertz": "50",
+                        "language": "German",
+                        "languagecode": "de",
+                        "latitude": "51.1642292",
+                        "longitude": "10.4541194",
+                        "name": "Germany",
+                        "numeric": "276",
+                        "timezone": "Central European Time",
+                        "timezonecode": "CET",
+                        "topleveldomain": ".de",
+                        "utc": "+1",
+                        "voltage": "230"
                     }
                 }
             };
@@ -644,6 +1146,7 @@
             /* Restore localStorage */
             let localStorageCountriesDataRows = localStorage.getItem('countriesDataRows');
             let localStorageCountriesDataRowsHover = localStorage.getItem('countriesDataRowsHover');
+            let localStorageCountriesWith = localStorage.getItem('countriesWith');
             let root = document.querySelector(':root');
             root.style.setProperty('--bodyDataRows', localStorageCountriesDataRows);
 
@@ -769,6 +1272,47 @@
                 root.style.setProperty('--bodyDataRowsHover', '0');
             }
             
+            /* Settings: countryWith */
+            function countryWithAll() {
+                localStorage.setItem('countriesWith', 'All');
+                if (document.getElementById('countriesContent')) {
+                    document.getElementById('countriesContent').textContent = '';
+                    countriesInfo();
+                    countriesData();
+                    document.getElementById('countriesContent').innerHTML = content;
+                }
+            }
+            
+            function countryWithA() {
+                localStorage.setItem('countriesWith', 'A');
+                if (document.getElementById('countriesContent')) {
+                    document.getElementById('countriesContent').textContent = '';
+                    countriesInfo();
+                    countriesData('A');
+                    document.getElementById('countriesContent').innerHTML = content;
+                }
+            }
+
+            function countryWithB() {
+                localStorage.setItem('countriesWith', 'B');
+                if (document.getElementById('countriesContent')) {
+                    document.getElementById('countriesContent').textContent = '';
+                    countriesInfo();
+                    countriesData('B');
+                    document.getElementById('countriesContent').innerHTML = content;
+                }
+            }
+
+            function countryWithG() {
+                localStorage.setItem('countriesWith', 'G');
+                if (document.getElementById('countriesContent')) {
+                    document.getElementById('countriesContent').textContent = '';
+                    countriesInfo();
+                    countriesData('G');
+                    document.getElementById('countriesContent').innerHTML = content;
+                }
+            }
+
             /* Variables */
             let countriesCount = Object.keys(data.countries).length;
             let mainContainer = document.getElementById("countries");
@@ -786,22 +1330,8 @@
             let countEurope = 0;
             let countOceania = 0;
             let currentLetter = '';
-
-            const imageExists = function (image = '') {
-                let xhr = new XMLHttpRequest();
-                xhr.open('HEAD', image + '.png', true);
-                xhr.send();
-                
-                if (xhr.status == '404') {
-                    return false;
-                    console.log(image + ' not exists')
-                }
-                if (xhr.status != '404') {
-                    return true;
-                    console.log(image + ' found')
-                }
-            }
-
+            
+            /* Constants */
             const bodyDataDiv = function (icon = '', content = '') {
                 return '<div class="bodyData" title="' + content + '"><i class="fa-solid ' + icon + '"></i>' + content + '</div>';
             }
@@ -825,164 +1355,206 @@
                 if (country.continent == 'Europe') {
                     countEurope++;
                 }
-                if (country.continent == 'Australia' | country.continent == 'Oceania') {
+                if (country.continent == 'Australia' || country.continent == 'Oceania') {
                     countOceania++;
                 }
             }
             
             /* Countries (Info), Sources, Settings */
-            content = '<div class="countriesContainer">'
-                    + '<div style="grid-column: 1 / -1; margin: 3px 0px 0px 5px; height: 20px;">Countries: '
-                    + (countriesCount - 1) + ' / 250'
-                    + ' | Africa: ' + countAfrica
-                    + ' | America: ' + countAmerica
-                    + ' | Asia: ' + countAsia
-                    + ' | Australia & Oceania: ' + countOceania
-                    + ' | Europe: ' + countEurope
-                    + '</div>'
-                    + '<div style="grid-column: 1 / -1; margin: 0px 0px 0px 5px; height: 20px;">Sources: '
-                    + '<a href="https://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1</a>'
-                    + ', <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1</a>'
-                    + ', <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>'
-                    + ', <a href="https://www.iec.ch/world-plugs">IEC</a>'
-                    + ', <a href="https://latitude.to/map">Latitude</a>'
-                    + ', <a href="https://www.flaticon.com/">Flaticon</a>'
-                    + ', <a href="https://fontawesome.com/">Fontawesome</a>'
-                    + ', <a href="https://github.com/Espoleon/countries">countries.json</a>'
-                    + '</div>'
-                    + '<div style="grid-column: 1 / -1; margin: 0px 0px 0px 5px; height: 20px;">'
-                    + '</div>'
-                    + '<div style="grid-column: 1 / -1; margin: 0px 0px 3px 5px; height: 20px;">Settings: '
-                    + 'DataRows '
-                    + '<button onclick="oneDataRow()" style="width:25px; text-align:center;">1</button> '
-                    + '<button onclick="twoDataRows()" style="width:25px; text-align:center;">2</button> '
-                    + '<button onclick="threeDataRows()" style="width:25px; text-align:center;">3</button> '
-                    + '<button onclick="fourDataRows()" style="width:25px; text-align:center;">4</button> '
-                    + '<button onclick="fiveDataRows()" style="width:25px; text-align:center;">5</button> '
-                    + 'DataRowsHover '
-                    + '<button onclick="dataRowsHoverOn()" style="width:35px; text-align:center;">On</button> '
-                    + '<button onclick="dataRowsHoverOff()" style="width:35px; text-align:center;">Off</button> '
-                    + '</div>';
+            function countriesInfo(letter = '') {
+                content = '<div class="countriesContainerHead">'
+                        + '<div style="grid-column: 1 / -1; margin: 3px 0px 0px 5px; height: 20px;">Countries: '
+                        + (countriesCount - 1) + ' / 250'
+                        + ' | Africa: ' + countAfrica
+                        + ' | America: ' + countAmerica
+                        + ' | Asia: ' + countAsia
+                        + ' | Australia & Oceania: ' + countOceania
+                        + ' | Europe: ' + countEurope
+                        + '</div>'
+                        + '<div style="grid-column: 1 / -1; margin: 0px 0px 0px 5px; height: 20px;">Sources: '
+                        + '<a href="https://en.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1</a>'
+                        + ', <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">ISO 639-1</a>'
+                        + ', <a href="https://en.wikipedia.org/wiki/ISO_4217">ISO 4217</a>'
+                        + ', <a href="https://www.worlddata.info/">WorldData</a>'
+                        + ', <a href="https://www.iec.ch/world-plugs">IEC</a>'
+                        + ', <a href="https://latitude.to/map">Latitude</a>'
+                        + ', <a href="https://www.flaticon.com/">Flaticon</a>'
+                        + ', <a href="https://fontawesome.com/">Fontawesome</a>'
+                        + ', <a href="https://github.com/Espoleon/countries">countries.json</a>'
+                        + '</div>'
+                        + '<div style="grid-column: 1 / -1; margin: 0px 0px 0px 5px; height: 20px;">'
+                        + '</div>'
+                        + '<div style="grid-column: 1 / -1; margin: 0px 0px 0px 5px; height: 20px;">Settings: '
+                        + 'DataRows '
+                        + '<button onclick="oneDataRow()" style="width:25px; height:20px; text-align:center;">1</button> '
+                        + '<button onclick="twoDataRows()" style="width:25px; height:20px; text-align:center;">2</button> '
+                        + '<button onclick="threeDataRows()" style="width:25px; height:20px; text-align:center;">3</button> '
+                        + '<button onclick="fourDataRows()" style="width:25px; height:20px; text-align:center;">4</button> '
+                        + '<button onclick="fiveDataRows()" style="width:25px; height:20px; text-align:center;">5</button> '
+                        + 'DataRowsHover '
+                        + '<button onclick="dataRowsHoverOn()" style="width:35px; height:20px; text-align:center;">On</button> '
+                        + '<button onclick="dataRowsHoverOff()" style="width:35px; height:20px; text-align:center;">Off</button> '
+                        + '</div>'
+                        + '<div style="grid-column: 1 / -1; margin: 0px 0px 3px 5px; height: 20px;">'
+                        + 'CountryWith '
+                        + '<button onclick="countryWithAll()" style="width:30px; height:20px; text-align:center;">All</button> '
+                        + '<button onclick="countryWithA()" style="width:25px; height:20px; text-align:center;">A</button> '
+                        + '<button onclick="countryWithB()" style="width:25px; height:20px; text-align:center;">B</button> '
+                        + '<button onclick="countryWithG()" style="width:25px; height:20px; text-align:center;">G</button> '
+                        + '</div>'
+                        + '</div>';
+            }
             
             /* Countries (Data) */
-            for (countriesName in data.countries) {
-                country = data.countries[countriesName];
-                
-                if (currentLetter != country.name.substr(0, 1)) {
-                    currentLetter = country.name.substr(0, 1);
-                    content += '</div>'
-                            + '<div class="countriesContainer"'
-                            + ' style="margin:5px auto 10px auto; padding:0px 0px 30px 0px">'
-                            + '<div style="grid-column:1 / -1;'
-                            + ' margin:3px 0px 3px 5px; text-indent:0px;">'
-                            + 'Countries: <b>' + currentLetter + '</b></div>';
-                }
-                
-                if (country.alpha2 != '' && country.alpha3 != '' && country.numeric != '' && country.name != '') {
-                    content += '<div class=countries>';
-                        content += '<div class=head>'
-                                + '<div class="headFlag">'
-                                + '<img src="' + pathFlag + country.alpha2.toLowerCase() + '.png"' 
-                                + 'width="' + flagW + '" height="' + flagH + '" loading="lazy">'
-                                + '</div>'
-                                + '<div class="headName">'
-                                + '<a href="https://www.google.com/maps/place/' + country.name + '">' + country.name + '</a>'
-                                + '</div>'
-                                + '</div>';
+            function countriesData(letter = '') {
+                for (countriesName in data.countries) {
+                    country = data.countries[countriesName];
+                    if (letter == ''
+                        ? country.alpha2 != ''
+                        && country.alpha3 != ''
+                        && country.numeric != ''
+                        && country.name != ''
+                        : country.alpha2 != ''
+                        && country.alpha3 != ''
+                        && country.numeric != ''
+                        && country.name != ''
+                        && country.name.startsWith(letter)) {
+                        if (currentLetter != country.name.substr(0, 1)) {
+                            currentLetter = country.name.substr(0, 1);
+                            content += '</div>'
+                                    + '<div id="' + currentLetter + '" class="countriesContainer"'
+                                    + ' style="margin:5px auto 10px auto; padding:0px 0px 30px 0px">'
+                                    + '<div style="grid-column:1 / -1;'
+                                    + ' margin:3px 0px 3px 5px; text-indent:0px;">'
+                                    + 'Countries: <b>' + currentLetter + '</b>'
+                                    + ' (' + Object.keys(data.countries).filter(k => k.startsWith(currentLetter)).length + ')</div>';
+                        }
                         
-                        content += '<div class="body">';
-                            if (country.capital == '') {
-                                content += bodyDataDiv('fa-landmark-flag', '--');
-                            }
-                            if (country.capital != '' && country.utc == '') {
-                                content += bodyDataDiv('fa-landmark-flag', country.capital);
-                            }
-                            if (country.capital != '' && country.utc != '') {
-                                content += bodyDataDiv('fa-landmark-flag', country.capital + ' (' + country.utc + ')');
-                            }
-                            if (country.continent == '') {
-                                content += bodyDataDiv('fa-globe', '--');
-                            }
-                            if (country.continent != '') {
-                                content += bodyDataDiv('fa-globe', country.continent);
-                            }
-                            content += bodyInfoDiv('Capital (UTC)')
-                                    + bodyInfoDiv('Continent');
+                        content += '<div class=countries>';
+                            content += '<div class=head>'
+                                    + '<div class="headFlag">'
+                                    //+ '<img src="' + pathFlag + country.alpha2.toLowerCase() + '.png"' 
+                                    //+ 'width="' + flagW + '" height="' + flagH + '" loading="lazy">'
+                                    + '</div>'
+                                    + '<div class="headName">'
+                                    + '<a href="https://www.google.com/maps/place/' + country.name + '">' + country.name + '</a>'
+                                    + '</div>'
+                                    + '</div>';
                             
-                            if (country.language == '' && country.languagecode == '') {
-                                content += bodyDataDiv('fa-comment-dots', '--');
-                            }
-                            if (country.language != '' && country.languagecode != '') {
-                                content += bodyDataDiv('fa-comment-dots', country.language + ' (' + country.languagecode + ')');
-                            }
-                            if (country.currency == '' && country.currencycode == '') {
-                                content += bodyDataDiv('fa-coins', '--');
-                            }
-                            if (country.currency != '' && country.currencycode != '') {
-                                content += bodyDataDiv('fa-coins', country.currency + ' (' + country.currencycode + ')');
-                            }
-                            content += bodyInfoDiv('Language (Languagecode)')
-                                    + bodyInfoDiv('Currency (Currencycode)');
-                            
-                            if (country.timezone == '' && country.timezonecode == '') {
-                                content += bodyDataDiv('fa-clock', '--');
-                            }
-                            if (country.timezone != '' && country.timezonecode != '') {
-                                content += bodyDataDiv('fa-clock', country.timezone + ' (' + country.timezonecode + ')');
-                            }
-                            if (country.dateformat == '') {
-                                content += bodyDataDiv('fa-calendar-days', '--');
-                            }
-                            if (country.dateformat != '') {
-                                content += bodyDataDiv('fa-calendar-days', country.dateformat);
-                            }
-                            content += bodyInfoDiv('Timezone (Timezonecode)')
-                                    + bodyInfoDiv('Dateformat');
-                            
-                            if (country.hertz == '' && country.voltage == '') {
-                                content += bodyDataDiv('fa-plug-circle-bolt', '-- / --');
-                            }
-                            if (country.hertz != '' && country.voltage != '') {
-                                content += bodyDataDiv('fa-plug-circle-bolt', country.hertz + ' / ' + country.voltage);
-                            }
-                            if (country.latitude == '' && country.longitude == '') {
-                                content += bodyDataDiv('fa-location-dot', '-- / --');
-                            }
-                            if (country.latitude != '' && country.longitude != '') {
-                                content += bodyDataDiv('fa-location-dot', country.latitude + ' / ' + country.longitude);
-                            }
-                            content += bodyInfoDiv('Hertz / Voltage')
-                                    + bodyInfoDiv('Latitude / Longitude');
-                            
-                            content += bodyDataDiv('fa-hashtag', country.alpha2 + ' / ' + country.alpha3 + ' / ' + country.numeric);
-                            if (country.callingcode == '' && country.topleveldomain == '') {
-                                content += bodyDataDiv('fa-tower-cell', '-- / --');
-                            }
-                            if (country.callingcode != '' && country.topleveldomain != '') {
-                                content += bodyDataDiv('fa-tower-cell', country.callingcode + ' / ' + country.topleveldomain);
-                            }
-                            if (country.callingcode == '' && country.topleveldomain != '') {
-                                content += bodyDataDiv('fa-tower-cell', '-- / ' + country.topleveldomain);
-                            }
-                            if (country.callingcode != '' && country.topleveldomain == '') {
-                                content += bodyDataDiv('fa-tower-cell', country.callingcode + ' / --');
-                            }
-                            content += bodyInfoDiv('Alpha2 / Alpha3 / Numeric')
-                                    + bodyInfoDiv('Callingcode / Topleveldomain');
-                            
-                            content += '<div class="bodyDataTwoColumnsFourRows"'
-                                    + ' style="justify-content:space-around; grid-template-columns:repeat(auto-fit, 1fr);">'
-                                content += "<img src='" + pathFlag + country.alpha2.toLowerCase() + ".png' width='" + gfxW + "' height='" + gfxH + "' loading='lazy'>";
-                                content += "<img src='" + pathCircle + country.alpha2.toLowerCase() + ".png' width='" + gfxW + "' height='" + gfxH + "' loading='lazy'>";
-                                content += "<img src='" + pathHexagon + country.alpha2.toLowerCase() + ".png' width='" + gfxW + "' height='" + gfxH + "' loading='lazy'>";
-                                content += "<img src='" + pathMarker + country.alpha2.toLowerCase() + ".png' width='" + gfxW + "' height='" + gfxH + "' loading='lazy'>";
+                            content += '<div class="body">';
+                                if (country.capital == '' && country.utc == '') {
+                                    content += bodyDataDiv('fa-landmark-flag', '--');
+                                }
+                                if (country.capital != '' && country.utc == '') {
+                                    content += bodyDataDiv('fa-landmark-flag', country.capital);
+                                }
+                                if (country.capital != '' && country.utc != '') {
+                                    content += bodyDataDiv('fa-landmark-flag', country.capital + ' (' + country.utc + ')');
+                                }
+                                if (country.capital == '' && country.utc != '') {
+                                    content += bodyDataDiv('fa-landmark-flag', '-- (' + country.utc + ')');
+                                }
+                                if (country.continent == '') {
+                                    content += bodyDataDiv('fa-globe', '--');
+                                }
+                                if (country.continent != '') {
+                                    content += bodyDataDiv('fa-globe', country.continent);
+                                }
+                                content += country.utc == '' ? bodyInfoDiv('Capital') : bodyInfoDiv('Capital (UTC)');
+                                content += bodyInfoDiv('Continent');
+                                
+                                if (country.language == '' && country.languagecode == '') {
+                                    content += bodyDataDiv('fa-comment-dots', '--');
+                                }
+                                if (country.language != '' && country.languagecode == '') {
+                                    content += bodyDataDiv('fa-comment-dots', country.language);
+                                }
+                                if (country.language != '' && country.languagecode != '') {
+                                    content += bodyDataDiv('fa-comment-dots', country.language + ' (' + country.languagecode + ')');
+                                }
+                                if (country.currency == '' && country.currencycode == '') {
+                                    content += bodyDataDiv('fa-coins', '--');
+                                }
+                                if (country.currency != '' && country.currencycode == '') {
+                                    content += bodyDataDiv('fa-coins', country.currency);
+                                }
+                                if (country.currency != '' && country.currencycode != '') {
+                                    content += bodyDataDiv('fa-coins', country.currency + ' (' + country.currencycode + ')');
+                                }
+                                content += country.languagecode == '' ? bodyInfoDiv('Language') : bodyInfoDiv('Language (Languagecode)');
+                                content += country.currencycode == '' ? bodyInfoDiv('Currency') : bodyInfoDiv('Currency (Currencycode)');
+                                
+                                if (country.timezone == '' && country.timezonecode == '') {
+                                    content += bodyDataDiv('fa-clock', '--');
+                                }
+                                if (country.timezone != '' && country.timezonecode == '') {
+                                    content += bodyDataDiv('fa-clock', country.timezone);
+                                }
+                                if (country.timezone != '' && country.timezonecode != '') {
+                                    content += bodyDataDiv('fa-clock', country.timezone + ' (' + country.timezonecode + ')');
+                                }
+                                if (country.dateformat == '') {
+                                    content += bodyDataDiv('fa-calendar-days', '--');
+                                }
+                                if (country.dateformat != '') {
+                                    content += bodyDataDiv('fa-calendar-days', country.dateformat);
+                                }
+                                content += country.timezonecode == '' ? bodyInfoDiv('Timezone') : bodyInfoDiv('Timezone (Timezonecode)');
+                                content += bodyInfoDiv('Dateformat');
+                                
+                                if (country.hertz == '' && country.voltage == '') {
+                                    content += bodyDataDiv('fa-plug-circle-bolt', '-- / --');
+                                }
+                                if (country.hertz != '' && country.voltage != '') {
+                                    content += bodyDataDiv('fa-plug-circle-bolt', country.hertz + ' / ' + country.voltage);
+                                }
+                                if (country.latitude == '' && country.longitude == '') {
+                                    content += bodyDataDiv('fa-location-dot', '-- / --');
+                                }
+                                if (country.latitude != '' && country.longitude != '') {
+                                    content += bodyDataDiv('fa-location-dot', country.latitude + ' / ' + country.longitude);
+                                }
+                                content += bodyInfoDiv('Hertz / Voltage')
+                                        + bodyInfoDiv('Latitude / Longitude');
+                                
+                                content += bodyDataDiv('fa-hashtag', country.alpha2 + ' / ' + country.alpha3 + ' / ' + country.numeric);
+                                if (country.callingcode == '' && country.topleveldomain == '') {
+                                    content += bodyDataDiv('fa-tower-cell', '-- / --');
+                                }
+                                if (country.callingcode != '' && country.topleveldomain != '') {
+                                    content += bodyDataDiv('fa-tower-cell', country.callingcode + ' / ' + country.topleveldomain);
+                                }
+                                if (country.callingcode == '' && country.topleveldomain != '') {
+                                    content += bodyDataDiv('fa-tower-cell', '-- / ' + country.topleveldomain);
+                                }
+                                if (country.callingcode != '' && country.topleveldomain == '') {
+                                    content += bodyDataDiv('fa-tower-cell', country.callingcode + ' / --');
+                                }
+                                content += bodyInfoDiv('Alpha2 / Alpha3 / Numeric')
+                                        + bodyInfoDiv('Callingcode / Topleveldomain');
+                                /*
+                                content += '<div class="bodyDataTwoColumnsFourRows"'
+                                        + ' style="justify-content:space-around; grid-template-columns:repeat(auto-fit, 1fr);">'
+                                    content += "<img src='" + pathFlag + country.alpha2.toLowerCase() + ".png' width='" + gfxW + "' height='" + gfxH + "' loading='lazy'>";
+                                    content += "<img src='" + pathCircle + country.alpha2.toLowerCase() + ".png' width='" + gfxW + "' height='" + gfxH + "' loading='lazy'>";
+                                    content += "<img src='" + pathHexagon + country.alpha2.toLowerCase() + ".png' width='" + gfxW + "' height='" + gfxH + "' loading='lazy'>";
+                                    content += "<img src='" + pathMarker + country.alpha2.toLowerCase() + ".png' width='" + gfxW + "' height='" + gfxH + "' loading='lazy'>";
+                                content += '</div>';
+                                */
                             content += '</div>';
                         content += '</div>';
-                    content += '</div>';
+                    }
                 }
             }
             
-            document.getElementById('countries').innerHTML = content;
+            countriesInfo();
+            if (localStorageCountriesWith != '' && localStorageCountriesWith != 'All') {
+                countriesData(localStorageCountriesWith);
+            }
+            if (localStorageCountriesWith != '' && localStorageCountriesWith == 'All') {
+                countriesData();
+            }
+            document.getElementById('countriesContent').innerHTML = content;
         </script>
     </body>
 </html>
