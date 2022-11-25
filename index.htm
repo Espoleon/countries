@@ -1127,7 +1127,7 @@
             let localStorageCountriesWith = localStorage.getItem('countriesWith');
             let root = document.querySelector(':root');
             root.style.setProperty('--bodyDataRows', localStorageCountriesDataRows);
-
+            
             if (localStorageCountriesDataRows == '1') {
                 if (localStorageCountriesDataRowsHover == 'On') {
                     root.style.setProperty('--bodyDataRowsHover', '6');
@@ -1281,16 +1281,6 @@
                 }
             }
 
-            function countryWithG() {
-                localStorage.setItem('countriesWith', 'G');
-                if (document.getElementById('countriesContent')) {
-                    document.getElementById('countriesContent').textContent = '';
-                    countriesInfo();
-                    countriesData('G');
-                    document.getElementById('countriesContent').innerHTML = content;
-                }
-            }
-
             /* Variables */
             let countriesCount = Object.keys(data.countries).length;
             let mainContainer = document.getElementById("countries");
@@ -1378,7 +1368,6 @@
                         + '<button onclick="countryWithAll()" style="width:30px; height:20px; text-align:center;">All</button> '
                         + '<button onclick="countryWithA()" style="width:25px; height:20px; text-align:center;">A</button> '
                         + '<button onclick="countryWithB()" style="width:25px; height:20px; text-align:center;">B</button> '
-                        + '<button onclick="countryWithG()" style="width:25px; height:20px; text-align:center;">G</button> '
                         + '</div>'
                         + '</div>';
             }
@@ -1525,10 +1514,13 @@
             }
             
             countriesInfo();
-            if (localStorageCountriesWith != '' && localStorageCountriesWith != 'All') {
+            if (localStorageCountriesWith != null && localStorageCountriesWith != 'All') {
                 countriesData(localStorageCountriesWith);
             }
-            if (localStorageCountriesWith != '' && localStorageCountriesWith == 'All') {
+            if (localStorageCountriesWith != null && localStorageCountriesWith == 'All') {
+                countriesData();
+            }
+            if (localStorageCountriesWith == null) {
                 countriesData();
             }
             document.getElementById('countriesContent').innerHTML = content;
