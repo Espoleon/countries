@@ -2,6 +2,7 @@
 <html lang="en">
     <head>
         <title>Countries</title>
+        <meta charset="utf-8">
         <style>
             /* Variables */
             :root {
@@ -45,6 +46,12 @@
             a:link, a:visited {
                 color: rgb(15, 95, 145);
                 text-decoration: none;
+            }
+            button {
+                margin: 0px;
+                padding: 0px;
+                width: 25px;
+                height: 19px;
             }
 
             /* Countries */
@@ -1637,6 +1644,53 @@
                 }
             };
             
+            /* CSS */
+            function css(id, styles) {
+                for (const property in styles) {
+                    document.getElementById(id).style[property] = styles[property];
+                }
+            }
+
+            function cssButtonDataRowsOne() {
+                css('buttonDataRowsOne', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(175, 195, 215)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsTwo', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsThree', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsFour', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsFive', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+            }
+
+            function cssButtonDataRowsTwo() {
+                css('buttonDataRowsOne', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsTwo', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(175, 195, 215)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsThree', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsFour', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsFive', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+            }
+
+            function cssButtonDataRowsThree() {
+                css('buttonDataRowsOne', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsTwo', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsThree', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(175, 195, 215)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsFour', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsFive', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+            }
+
+            function cssButtonDataRowsFour() {
+                css('buttonDataRowsOne', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsTwo', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsThree', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsFour', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(175, 195, 215)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsFive', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+            }
+
+            function cssButtonDataRowsFive() {
+                css('buttonDataRowsOne', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsTwo', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsThree', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsFour', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsFive', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(175, 195, 215)', border: 'solid 1px rgb(145, 145, 145)'});
+            }
+
             /* Restore localStorage */
             let localStorageCountriesDataRows = localStorage.getItem('countriesDataRows');
             let localStorageCountriesDataRowsHover = localStorage.getItem('countriesDataRowsHover');
@@ -1705,6 +1759,7 @@
             function oneDataRow() {
                 localStorage.setItem('countriesDataRows', '1');
                 root.style.setProperty('--bodyDataRows', '1');
+                cssButtonDataRowsOne();
                 if (localStorage.getItem('countriesDataRowsHover') == 'On') {
                     root.style.setProperty('--bodyDataRowsHover', '6');
                 }
@@ -1716,6 +1771,7 @@
             function twoDataRows() {
                 localStorage.setItem('countriesDataRows', '2');
                 root.style.setProperty('--bodyDataRows', '2');
+                cssButtonDataRowsTwo();
                 if (localStorage.getItem('countriesDataRowsHover') == 'On') {
                     root.style.setProperty('--bodyDataRowsHover', '5');
                 }
@@ -1727,6 +1783,7 @@
             function threeDataRows() {
                 localStorage.setItem('countriesDataRows', '3');
                 root.style.setProperty('--bodyDataRows', '3');
+                cssButtonDataRowsThree();
                 if (localStorage.getItem('countriesDataRowsHover') == 'On') {
                     root.style.setProperty('--bodyDataRowsHover', '4');
                 }
@@ -1738,6 +1795,7 @@
             function fourDataRows() {
                 localStorage.setItem('countriesDataRows', '4');
                 root.style.setProperty('--bodyDataRows', '4');
+                cssButtonDataRowsFour();
                 if (localStorage.getItem('countriesDataRowsHover') == 'On') {
                     root.style.setProperty('--bodyDataRowsHover', '3');
                 }
@@ -1749,6 +1807,7 @@
             function fiveDataRows() {
                 localStorage.setItem('countriesDataRows', '5');
                 root.style.setProperty('--bodyDataRows', '5');
+                cssButtonDataRowsFive();
                 if (localStorage.getItem('countriesDataRowsHover') == 'On') {
                     root.style.setProperty('--bodyDataRowsHover', '2');
                 }
@@ -1876,26 +1935,26 @@
                         + '</div>'
                         + '<div style="grid-column: 1 / -1; margin: 0px 0px 0px 5px; height: 20px;">Settings: '
                         + 'DataRows '
-                        + '<button onclick="oneDataRow()" style="width:25px; height:20px; text-align:center;">1</button> '
-                        + '<button onclick="twoDataRows()" style="width:25px; height:20px; text-align:center;">2</button> '
-                        + '<button onclick="threeDataRows()" style="width:25px; height:20px; text-align:center;">3</button> '
-                        + '<button onclick="fourDataRows()" style="width:25px; height:20px; text-align:center;">4</button> '
-                        + '<button onclick="fiveDataRows()" style="width:25px; height:20px; text-align:center;">5</button> '
+                        + '<button id="buttonDataRowsOne" onclick="oneDataRow()">1</button> '
+                        + '<button id="buttonDataRowsTwo" onclick="twoDataRows()">2</button> '
+                        + '<button id="buttonDataRowsThree" onclick="threeDataRows()">3</button> '
+                        + '<button id="buttonDataRowsFour" onclick="fourDataRows()">4</button> '
+                        + '<button id="buttonDataRowsFive" onclick="fiveDataRows()">5</button> '
                         + 'DataRowsHover '
-                        + '<button onclick="dataRowsHoverOn()" style="width:35px; height:20px; text-align:center;">On</button> '
-                        + '<button onclick="dataRowsHoverOff()" style="width:35px; height:20px; text-align:center;">Off</button> '
+                        + '<button onclick="dataRowsHoverOn()" style="width:35px; text-align:center;">On</button> '
+                        + '<button onclick="dataRowsHoverOff()" style="width:35px; text-align:center;">Off</button> '
                         + 'Icons '
-                        + '<button onclick="iconsOn()" style="width:35px; height:20px; text-align:center;">On</button> '
-                        + '<button onclick="iconsOff()" style="width:35px; height:20px; text-align:center;">Off</button> '
+                        + '<button onclick="iconsOn()" style="width:35px; text-align:center;">On</button> '
+                        + '<button onclick="iconsOff()" style="width:35px; text-align:center;">Off</button> '
                         + '</div>'
                         + '<div style="grid-column: 1 / -1; margin: 0px 0px 3px 64px; height: 20px;">'
                         + 'CountryWith '
-                content += '<button onclick="countryWith(this)" style="width:30px; height:20px; text-align:center;">All</button> ';
+                content += '<button onclick="countryWith(this)" style="width:30px; text-align:center;">All</button> ';
                 for (countriesName in data.countries) {
                     country = data.countries[countriesName];
                     if (currentLetter != country.name.substr(0, 1)) {
                         currentLetter = country.name.substr(0, 1);
-                        content += '<button onclick="countryWith(this)" style="width:25px; height:20px; text-align:center;">' + currentLetter + '</button> ';
+                        content += '<button onclick="countryWith(this)" style="width:25px; text-align:center;">' + currentLetter + '</button> ';
                     }
                 }
                 content += '</div>'
@@ -2056,6 +2115,7 @@
                 }
             }
             
+            /* Initialization */
             countriesInfo();
             if (localStorageCountriesWith != null && localStorageCountriesWith != 'All') {
                 countriesData(localStorageCountriesWith);
@@ -2064,6 +2124,25 @@
                 countriesData();
             }
             document.getElementById('countriesContent').innerHTML = content;
+            
+            if (localStorageCountriesDataRows == null) {
+                cssButtonDataRowsThree();
+            }
+            if (localStorageCountriesDataRows == '1') {
+                cssButtonDataRowsOne();
+            }
+            if (localStorageCountriesDataRows == '2') {
+                cssButtonDataRowsTwo();
+            }
+            if (localStorageCountriesDataRows == '3') {
+                cssButtonDataRowsThree();
+            }
+            if (localStorageCountriesDataRows == '4') {
+                cssButtonDataRowsFour();
+            }
+            if (localStorageCountriesDataRows == '5') {
+                cssButtonDataRowsFive();
+            }
         </script>
     </body>
 </html>
