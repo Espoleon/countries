@@ -26,7 +26,7 @@
                 --countriesContainerBackgroundColor: rgb(182, 195, 208);
                 
                 --countriesWidth: 390px;
-                --countriesHeadHeight: 30px;
+                --countriesHeadHeight: 24px;
                 --countriesBackground: rgba(164, 175, 186, 1.0);
                 --countriesBackgroundHover: rgba(192, 203, 214, 1.0);
                 --countriesBorderRadius: 8px;
@@ -131,8 +131,6 @@
             .head {
                 display: grid;
                 grid-area: head;
-                justify-content: start;
-                align-content: center;
                 grid-template-columns: 40px 1fr;
                 grid-template-rows: var(--countriesHeadHeight);
                 grid-gap: 0px 0px;
@@ -142,9 +140,10 @@
                 color: rgb(0, 0, 0);
                 background: linear-gradient(
                                             225deg,
-                                            transparent 20px,
-                                            rgba(151, 167, 178, 1.0) 20px,
-                                            rgba(121, 137, 148, 1.0) 20px
+                                            transparent 15px,
+                                            rgba(126, 137, 148, 1.0) 10px,
+                                            rgba(126, 137, 148, 1.0) 60px,
+                                            rgba(146, 157, 168, 1.0) 120px
                                            ) top right;
                 border-bottom: 2px solid rgb(65, 65, 65);
                 border-top-left-radius: var(--countriesBorderRadius);
@@ -154,11 +153,13 @@
                 grid-area: headFlag;
                 justify-content: center;
                 align-content: center;
+                margin: 0px 0px 0px 2px;
+                height: calc(var(--countriesHeadHeight) - 2px);
                 transition: all ease 100ms;
             }
             .headFlag:hover {
-                transform: scale(3.2);
-                transform-origin: 11% 25%;
+                transform: scale(3.0);
+                transform-origin: 15% 14%;
                 z-index: 101;
             }
             .headName {
@@ -167,6 +168,9 @@
                 justify-content: start;
                 align-content: center;
                 grid-auto-flow: column;
+                padding-top: 1px;
+                height: calc(var(--countriesHeadHeight) - 2px);
+                text-indent: 2px;
                 text-overflow: ellipsis;
                 white-space: nowrap;
                 overflow: hidden;
@@ -1691,6 +1695,26 @@
                 css('buttonDataRowsFive', {margin: '0px', padding: '0px', width: '25px', height: '19px', backgroundColor: 'rgb(175, 195, 215)', border: 'solid 1px rgb(145, 145, 145)'});
             }
 
+            function cssButtonDataRowsHoverOn() {
+                css('buttonDataRowsHoverOn', {margin: '0px', padding: '0px', width: '35px', height: '19px', backgroundColor: 'rgb(175, 195, 215)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsHoverOff', {margin: '0px', padding: '0px', width: '35px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+            }
+
+            function cssButtonDataRowsHoverOff() {
+                css('buttonDataRowsHoverOn', {margin: '0px', padding: '0px', width: '35px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonDataRowsHoverOff', {margin: '0px', padding: '0px', width: '35px', height: '19px', backgroundColor: 'rgb(175, 195, 215)', border: 'solid 1px rgb(145, 145, 145)'});
+            }
+
+            function cssButtonIconsOn() {
+                css('buttonIconsOn', {margin: '0px', padding: '0px', width: '35px', height: '19px', backgroundColor: 'rgb(175, 195, 215)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonIconsOff', {margin: '0px', padding: '0px', width: '35px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+            }
+
+            function cssButtonIconsOff() {
+                css('buttonIconsOn', {margin: '0px', padding: '0px', width: '35px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
+                css('buttonIconsOff', {margin: '0px', padding: '0px', width: '35px', height: '19px', backgroundColor: 'rgb(175, 195, 215)', border: 'solid 1px rgb(145, 145, 145)'});
+            }
+            
             /* Restore localStorage */
             let localStorageCountriesDataRows = localStorage.getItem('countriesDataRows');
             let localStorageCountriesDataRowsHover = localStorage.getItem('countriesDataRowsHover');
@@ -1739,6 +1763,7 @@
                     root.style.setProperty('--bodyDataRowsHover', '0');
                 }
             }
+            
             if (localStorageCountriesIcons == 'On') {
                 root.style.setProperty('--bodyInfoTextIndent', '18px');
             }
@@ -1819,6 +1844,7 @@
             /* Settings: dataRowsHover */
             function dataRowsHoverOn() {
                 localStorage.setItem('countriesDataRowsHover', 'On');
+                cssButtonDataRowsHoverOn();
                 if (localStorage.getItem('countriesDataRows') == '1') {
                     root.style.setProperty('--bodyDataRowsHover', '6');
                 }
@@ -1838,6 +1864,7 @@
             
             function dataRowsHoverOff() {
                 localStorage.setItem('countriesDataRowsHover', 'Off');
+                cssButtonDataRowsHoverOff();
                 root.style.setProperty('--bodyDataRowsHover', '0');
             }
             
@@ -1856,17 +1883,61 @@
                     }
                     document.getElementById('countriesContent').innerHTML = content;
                 }
+                
+                let localStorageCountriesDataRows = localStorage.getItem('countriesDataRows');
+                if (localStorageCountriesDataRows == null) {
+                    cssButtonDataRowsThree();
+                }
+                if (localStorageCountriesDataRows == '1') {
+                    cssButtonDataRowsOne();
+                }
+                if (localStorageCountriesDataRows == '2') {
+                    cssButtonDataRowsTwo();
+                }
+                if (localStorageCountriesDataRows == '3') {
+                    cssButtonDataRowsThree();
+                }
+                if (localStorageCountriesDataRows == '4') {
+                    cssButtonDataRowsFour();
+                }
+                if (localStorageCountriesDataRows == '5') {
+                    cssButtonDataRowsFive();
+                }
+                
+                let localStorageCountriesDataRowsHover = localStorage.getItem('countriesDataRowsHover');
+                if (localStorageCountriesDataRowsHover == null) {
+                    cssButtonDataRowsHoverOn();
+                }
+                if (localStorageCountriesDataRowsHover == 'On') {
+                    cssButtonDataRowsHoverOn();
+                }
+                if (localStorageCountriesDataRowsHover == 'Off') {
+                    cssButtonDataRowsHoverOff();
+                }
+                
+                let localStorageCountriesIcons = localStorage.getItem('countriesIcons');
+                if (localStorageCountriesIcons == null) {
+                    cssButtonIconsOn();
+                }
+                if (localStorageCountriesIcons == 'On') {
+                    cssButtonIconsOn();
+                }
+                if (localStorageCountriesIcons == 'Off') {
+                    cssButtonIconsOff();
+                }
             }
 
             /* Settings: icons */
             function iconsOn() {
                 localStorage.setItem('countriesIcons', 'On');
+                cssButtonIconsOn();
                 root.style.setProperty('--bodyDataIcon', 'inline-block');
                 root.style.setProperty('--bodyInfoTextIndent', '18px');
             }
 
             function iconsOff() {
                 localStorage.setItem('countriesIcons', 'Off');
+                cssButtonIconsOff();
                 root.style.setProperty('--bodyDataIcon', 'none');
                 root.style.setProperty('--bodyInfoTextIndent', '0px');
             }
@@ -1941,11 +2012,11 @@
                         + '<button id="buttonDataRowsFour" onclick="fourDataRows()">4</button> '
                         + '<button id="buttonDataRowsFive" onclick="fiveDataRows()">5</button> '
                         + 'DataRowsHover '
-                        + '<button onclick="dataRowsHoverOn()" style="width:35px; text-align:center;">On</button> '
-                        + '<button onclick="dataRowsHoverOff()" style="width:35px; text-align:center;">Off</button> '
+                        + '<button id="buttonDataRowsHoverOn" onclick="dataRowsHoverOn()">On</button> '
+                        + '<button id="buttonDataRowsHoverOff" onclick="dataRowsHoverOff()">Off</button> '
                         + 'Icons '
-                        + '<button onclick="iconsOn()" style="width:35px; text-align:center;">On</button> '
-                        + '<button onclick="iconsOff()" style="width:35px; text-align:center;">Off</button> '
+                        + '<button id="buttonIconsOn" onclick="iconsOn()">On</button> '
+                        + '<button id="buttonIconsOff" onclick="iconsOff()">Off</button> '
                         + '</div>'
                         + '<div style="grid-column: 1 / -1; margin: 0px 0px 3px 64px; height: 20px;">'
                         + 'CountryWith '
@@ -2142,6 +2213,28 @@
             }
             if (localStorageCountriesDataRows == '5') {
                 cssButtonDataRowsFive();
+            }
+
+            if (localStorageCountriesDataRowsHover == null) {
+                cssButtonDataRowsHoverOn();
+            }
+            if (localStorageCountriesDataRowsHover == 'On') {
+                cssButtonDataRowsHoverOn();
+            }
+            if (localStorageCountriesDataRowsHover == 'Off') {
+                cssButtonDataRowsHoverOff();
+            }
+
+            if (localStorageCountriesIcons == null) {
+                cssButtonIconsOn();
+            }
+            if (localStorageCountriesIcons == 'On') {
+                cssButtonIconsOn();
+            }
+            if (localStorageCountriesIcons == 'Off') {
+                cssButtonIconsOff();
+                root.style.setProperty('--bodyDataIcon', 'none');
+                root.style.setProperty('--bodyInfoTextIndent', '0px');
             }
         </script>
     </body>
