@@ -22,15 +22,16 @@
                 --bodyInfoFontSize: 12px;
                 --bodyInfoColor: rgb(70, 70, 70);
                 --bodyInfoTextIndent: 18px;
+                --bodyInfoBorderColor: rgb(95, 95, 95);
 
                 --countriesContainerBackgroundColor: rgb(182, 195, 208);
                 
                 --countriesWidth: 390px;
                 --countriesHeadHeight: 24px;
-                --countriesBackground: rgba(164, 175, 186, 1.0);
+                --countriesBackground: rgba(162, 173, 184, 1.0);
                 --countriesBackgroundHover: rgba(192, 203, 214, 1.0);
                 --countriesBorderRadius: 8px;
-                --countriesShadow: rgb(150, 150, 150);
+                --countriesShadow: rgb(170, 170, 170);
                 --countriesShadowHover: rgb(50, 50, 50);
             }
             
@@ -131,7 +132,7 @@
             .head {
                 display: grid;
                 grid-area: head;
-                grid-template-columns: 40px 1fr;
+                grid-template-columns: 40px 90%;
                 grid-template-rows: var(--countriesHeadHeight);
                 grid-gap: 0px 0px;
                 grid-template-areas:
@@ -169,7 +170,8 @@
                 align-content: center;
                 grid-auto-flow: column;
                 padding-top: 1px;
-                height: calc(var(--countriesHeadHeight) - 2px);
+                width: 90%;
+                height: calc(var(--countriesHeadHeight) - 4px);
                 text-indent: 2px;
                 text-overflow: ellipsis;
                 white-space: nowrap;
@@ -220,7 +222,7 @@
                 margin: 0px 0px 0px 0px;
                 width: 18px;
                 text-align: center;
-                font-size: 14px;
+                font-size: 13px;
                 color: var(--bodyDataIconColor);
             }
             .bodyDataTwoColumns {
@@ -275,7 +277,7 @@
                 overflow: hidden;
             }
             .bodyInfoBorder {
-                border-bottom: 1px solid rgb(65, 65, 65);
+                border-bottom: 1px solid var(--bodyInfoBorderColor);
             }
         </style>
         <script src="https://kit.fontawesome.com/fc66947bd3.js" crossorigin="anonymous"></script>
@@ -1644,6 +1646,94 @@
                         "topleveldomain": ".cz",
                         "utc": "+01:00",
                         "voltage": "230"
+                    },
+                    "Denmark": {
+                        "alpha2": "DK",
+                        "alpha3": "DNK",
+                        "callingcode": "+45",
+                        "capital": "Copenhagen",
+                        "continent": "Europe",
+                        "currency": "Danish Krone",
+                        "currencycode": "DKK",
+                        "dateformat": "dd/mm/yyyy",
+                        "hertz": "50",
+                        "language": "Danish",
+                        "languagecode": "da",
+                        "latitude": "55.9396761",
+                        "longitude": "9.5155848",
+                        "name": "Denmark",
+                        "numeric": "208",
+                        "timezone": "Central European Time",
+                        "timezonecode": "CET",
+                        "topleveldomain": ".dk",
+                        "utc": "+01:00",
+                        "voltage": "230"
+                    },
+                    "Djibouti": {
+                        "alpha2": "DJ",
+                        "alpha3": "DJI",
+                        "callingcode": "+253",
+                        "capital": "Djibouti",
+                        "continent": "Africa",
+                        "currency": "Djiboutian Franc",
+                        "currencycode": "DJF",
+                        "dateformat": "dd/mm/yyyy",
+                        "hertz": "50",
+                        "language": "Arabic, French",
+                        "languagecode": "ar, fr",
+                        "latitude": "11.8226699",
+                        "longitude": "42.5883476",
+                        "name": "Djibouti",
+                        "numeric": "262",
+                        "timezone": "Eastern Africa Time",
+                        "timezonecode": "EAT",
+                        "topleveldomain": ".dj",
+                        "utc": "+03:00",
+                        "voltage": "220"
+                    },
+                    "Dominica": {
+                        "alpha2": "DM",
+                        "alpha3": "DMA",
+                        "callingcode": "+1-767",
+                        "capital": "Roseau",
+                        "continent": "America",
+                        "currency": "Eastern Caribbean dollar",
+                        "currencycode": "XCD",
+                        "dateformat": "dd/mm/yyyy",
+                        "hertz": "50",
+                        "language": "English",
+                        "languagecode": "en",
+                        "latitude": "15.4238729",
+                        "longitude": "-61.3600668",
+                        "name": "Dominica",
+                        "numeric": "212",
+                        "timezone": "Atlantic Standard Time",
+                        "timezonecode": "AST",
+                        "topleveldomain": ".dm",
+                        "utc": "-04:00",
+                        "voltage": "230"
+                    },
+                    "Dominican Republic": {
+                        "alpha2": "DO",
+                        "alpha3": "DOM",
+                        "callingcode": "+1-809",
+                        "capital": "Santo Domingo",
+                        "continent": "America",
+                        "currency": "Dominican Peso",
+                        "currencycode": "DOP",
+                        "dateformat": "dd/mm/yyyy",
+                        "hertz": "60",
+                        "language": "Spanish",
+                        "languagecode": "es",
+                        "latitude": "18.7009047",
+                        "longitude": "-70.1654584",
+                        "name": "Dominican Republic",
+                        "numeric": "214",
+                        "timezone": "Atlantic Standard Time",
+                        "timezonecode": "AST",
+                        "topleveldomain": ".do",
+                        "utc": "-04:00",
+                        "voltage": "110"
                     }
                 }
             };
@@ -1713,6 +1803,10 @@
             function cssButtonIconsOff() {
                 css('buttonIconsOn', {margin: '0px', padding: '0px', width: '35px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
                 css('buttonIconsOff', {margin: '0px', padding: '0px', width: '35px', height: '19px', backgroundColor: 'rgb(175, 195, 215)', border: 'solid 1px rgb(145, 145, 145)'});
+            }
+
+            function cssButtonCountryWithAll() {
+                css('buttonCountryWithAll', {margin: '0px', padding: '0px', width: '30px', height: '19px', backgroundColor: 'rgb(245, 245, 245)', border: 'solid 1px rgb(145, 145, 145)'});
             }
             
             /* Restore localStorage */
@@ -2020,12 +2114,12 @@
                         + '</div>'
                         + '<div style="grid-column: 1 / -1; margin: 0px 0px 3px 64px; height: 20px;">'
                         + 'CountryWith '
-                content += '<button onclick="countryWith(this)" style="width:30px; text-align:center;">All</button> ';
+                content += '<button id="buttonCountryWithAll" onclick="countryWith(this)">All</button> ';
                 for (countriesName in data.countries) {
                     country = data.countries[countriesName];
                     if (currentLetter != country.name.substr(0, 1)) {
                         currentLetter = country.name.substr(0, 1);
-                        content += '<button onclick="countryWith(this)" style="width:25px; text-align:center;">' + currentLetter + '</button> ';
+                        content += '<button id="buttonCountryWith' + currentLetter + '" onclick="countryWith(this)" style="width:25px; text-align:center;">' + currentLetter + '</button> ';
                     }
                 }
                 content += '</div>'
@@ -2196,16 +2290,13 @@
             }
             document.getElementById('countriesContent').innerHTML = content;
             
-            if (localStorageCountriesDataRows == null) {
-                cssButtonDataRowsThree();
-            }
             if (localStorageCountriesDataRows == '1') {
                 cssButtonDataRowsOne();
             }
             if (localStorageCountriesDataRows == '2') {
                 cssButtonDataRowsTwo();
             }
-            if (localStorageCountriesDataRows == '3') {
+            if (localStorageCountriesDataRows == null || localStorageCountriesDataRows == '3') {
                 cssButtonDataRowsThree();
             }
             if (localStorageCountriesDataRows == '4') {
@@ -2215,26 +2306,24 @@
                 cssButtonDataRowsFive();
             }
 
-            if (localStorageCountriesDataRowsHover == null) {
-                cssButtonDataRowsHoverOn();
-            }
-            if (localStorageCountriesDataRowsHover == 'On') {
+            if (localStorageCountriesDataRowsHover == null || localStorageCountriesDataRowsHover == 'On') {
                 cssButtonDataRowsHoverOn();
             }
             if (localStorageCountriesDataRowsHover == 'Off') {
                 cssButtonDataRowsHoverOff();
             }
 
-            if (localStorageCountriesIcons == null) {
-                cssButtonIconsOn();
-            }
-            if (localStorageCountriesIcons == 'On') {
+            if (localStorageCountriesIcons == null || localStorageCountriesIcons == 'On') {
                 cssButtonIconsOn();
             }
             if (localStorageCountriesIcons == 'Off') {
                 cssButtonIconsOff();
                 root.style.setProperty('--bodyDataIcon', 'none');
                 root.style.setProperty('--bodyInfoTextIndent', '0px');
+            }
+            
+            if (localStorageCountriesWith == null || localStorageCountriesWith == 'All') {
+                cssButtonCountryWithAll();
             }
         </script>
     </body>
