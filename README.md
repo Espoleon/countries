@@ -3,7 +3,7 @@
 How I add a new country as video:  
 https://youtu.be/wKAy4z92pfM
 
-Current progress can be found here:  
+Current progress as HTML preview can be found here:  
 http://countries.infinityfreeapp.com/
   
 ___
@@ -18,7 +18,7 @@ ___
   
 Sources used by this repository:  
 [ISO 3166-1 (Wikipedia)](https://en.wikipedia.org/wiki/ISO_3166-1)  
-[ISO 4217 (Wikipediaa)](https://en.wikipedia.org/wiki/ISO_4217)  
+[ISO 4217 (Wikipedia)](https://en.wikipedia.org/wiki/ISO_4217)  
 [WorldData](https://www.worlddata.info/)  
 [IEC (International Electrotechnical Commission)](https://www.iec.ch/world-plugs)  
 [Latitude](https://latitude.to/map)  
