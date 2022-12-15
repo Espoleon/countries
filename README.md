@@ -3,13 +3,13 @@
 How I add a new country as video:  
 https://youtu.be/wKAy4z92pfM
 
-Current progress as HTML preview can be found here:  
+Current progress as HTML can be found here:  
 http://countries.infinityfreeapp.com/
   
 ___
   
 [Pre-Releases](https://github.com/Espoleon/countries/releases) means complete letters e.g. A, B, C, ...  
-They includes the current HTML preview and the current JSON.  
+They includes the current HTML and the current JSON.  
   
 Cause CORS (Cross-Origin Resource Sharing) I decide to add a JSON into the HTML preview.  
 It's the same JSON as the JSON single file.
