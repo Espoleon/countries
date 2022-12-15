@@ -11,7 +11,7 @@ ___
 [Pre-Releases](https://github.com/Espoleon/countries/releases) means complete letters e.g. A, B, C, ...  
 They includes the current HTML and the current JSON.  
   
-Cause CORS (Cross-Origin Resource Sharing) I decide to add a JSON into the HTML.  
+Cause CORS (Cross-Origin Resource Sharing) I decided to add a JSON into the HTML.  
 It's the same JSON as the JSON single file.
   
 ___  
